@@ -16,4 +16,4 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         DRY_RUN: true
     - name: Print Tag Name
-      run: echo "${{ env.new_tag}}"
+      run: echo $GITHUB_REF
