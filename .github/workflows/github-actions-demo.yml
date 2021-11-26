@@ -8,6 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - name: Get the tag name
-        run:echo "TAG=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_ENV
+       run: echo "TAG=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_ENV
      - name: Echo
-        run:${{ env.TAG}}
+       run: ${{ env.TAG}}
