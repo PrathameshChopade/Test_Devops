@@ -27,6 +27,6 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
     - name: Publish package
-      run: mvn deploy -Dversion=r203
+      run: mvn deploy -Dversion=r203 -Dregistry=https://github.com/Nikhil-Kaware/Test_Devops.git
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
