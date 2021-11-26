@@ -17,3 +17,5 @@ jobs:
         DRY_RUN: true
     - name: Print Tag Name
       run: echo $GITHUB_REF
+    - name: Print Version
+      run: echo $RELEASE_VERSION
