@@ -6,6 +6,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions: 
+      contents: read
+      packages: write 
     steps:
     - uses: actions/checkout@v2
       with:
@@ -15,7 +18,15 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         DRY_RUN: true
-    - name: Build and publish
-      run: mvn install
-    - name: Print Version
-      run: echo $RELEASE_VERSION
+    - name: Maven Build
+      run: mvn clean install
+  
+    - uses: actions/checkout@v2
+    - uses: actions/setup-java@v2
+      with:
+          java-version: '11'
+          distribution: 'adopt'
+    - name: Publish package
+      run: mvn deploy -Dversion=r203
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
