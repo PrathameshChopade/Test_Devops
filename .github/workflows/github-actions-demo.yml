@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Bump version and push tag
-      uses: Nikhil-Kaware/Test_Devops
+      uses: Nikhil-Kaware/Test_Devops@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         DRY_RUN: true
