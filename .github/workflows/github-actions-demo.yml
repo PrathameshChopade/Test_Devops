@@ -18,8 +18,8 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         DRY_RUN: true
-    - name: Output
-      run: ${{ Ctag.tag }} ${{ Ctag.new_tag }}
+    - name: Sample
+      run: echo "Hello $DRY_RUN.tag $DRY_RUN.new_tag  today is Monday!"
     - name: Maven Build
       run: mvn clean install
   
