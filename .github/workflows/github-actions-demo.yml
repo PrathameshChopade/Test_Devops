@@ -31,5 +31,5 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
     - name: Publish package
-      run: mvn deploy -Dversion=${{steps.version.outputs.new_tag}} --settings $GITHUB_WORKSPACE/.m2/settings.xml
+      run: mvn deploy -Dversion=${{steps.version.outputs.new_tag}} --settings $GITHUB_WORKSPACE/.m2/settings.xml -X
 
