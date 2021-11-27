@@ -32,4 +32,6 @@ jobs:
           distribution: 'adopt'
     - name: Publish package
       run: mvn deploy -Dversion=${{steps.version.outputs.new_tag}} --settings $GITHUB_WORKSPACE/.m2/settings.xml -X
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
