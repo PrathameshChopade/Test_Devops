@@ -7,7 +7,7 @@
       <uniqueVersion>false</uniqueVersion>
       <id>Internal</id>
       <name>Internal Repository</name>
-      <url>file:///C:/temp/Repo</url>
+      <url>https://github.com/Nikhil-Kaware/Test_Devops.git</url>
       <layout>default</layout>
     </repository>
 </distributionManagement>
