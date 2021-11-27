@@ -19,8 +19,8 @@ jobs:
       #run: echo "::set-output name=author::$(uses anothrNick/github-tag-action@1.36.0)"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        WITH_V: true
-#        DRY_RUN: true
+#        WITH_V: true
+        DRY_RUN: true
         
 #     - name: Sample
 #       run: echo "Hello $DRY_RUN.tag $DRY_RUN.new_tag  today is Monday!"
