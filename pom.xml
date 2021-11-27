@@ -41,7 +41,7 @@
 		    <repository>
 		      <id>github</id>
 		      <name>GitHub Packages</name>
-		      <url>https://github.com/prathmeshchopade/hello-world</url>
+		      <url>https://github.com/PrathameshChopade/hello-world</url>
 		    </repository>
 	</distributionManagement>
 
